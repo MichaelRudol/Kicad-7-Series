@@ -48,7 +48,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -165,8 +171,15 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
-      "via_dimensions": [],
+      "track_widths": [
+        0.0
+      ],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "layer_presets": [],
@@ -377,7 +390,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
@@ -392,7 +405,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Introduction.kicad_pro",
+    "filename": "Untitled.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -413,14 +426,91 @@
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Signal",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
       }
     ],
     "meta": {
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_assignments": {
+      "/LED": "Signal",
+      "/RES-C": "Signal",
+      "GND": "Signal",
+      "Net-(MK1-+)": "Signal",
+      "Net-(U1-PB2)": "Signal"
+    },
+    "netclass_patterns": [
+      {
+        "netclass": "Default",
+        "pattern": "Power"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Info"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "LED-Input-01"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "/LED-Input-02"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+3.3V"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "/RES-C"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "/M-INP-2"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "/M-INPUT"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -467,6 +557,11 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "2af5dd03-30e6-4c88-a7e8-ab26d6c8d882",
+      ""
+    ]
+  ],
   "text_variables": {}
 }
